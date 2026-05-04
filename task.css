@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #021531 0%, #0f469e 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #f33636;
+    margin-bottom: 20px;
+}
+h4 {
+    color: #230a5c;
+    text-align: center;
+    padding-left: 20px;
+    margin: 0;
+}
+
+
+input, button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#spinButton {
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fdfdfd;
+}
+
+#arrow {
+    font-size: 36px;
+    color: #050505;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 28px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+.menu-button:hover {
+    background-color: #555;
+}
+
+.history-panel {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 320px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.history-panel.open {
+    left: 0;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-button:hover {
+    color: #f33636;
+}
+
+.history-list {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.history-item {
+    background-color: #2a2a2a;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #4CAF50;
+}
+
+.history-time {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.history-result {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.clear-button {
+    width: 100%;
+    background-color: #f33636;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.clear-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    input, button {
+        padding: 8px 12px;
+        margin: 3px;
+        font-size: 14px;
+    }
+
+    .menu-button {
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+    .history-panel {
+        width: 100%;
+        left: -100%;
+    }
+
+    #wheelCanvas {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+
+    #arrow {
+        font-size: 28px;
+    }
+
+    .panel-header h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    input, button {
+        padding: 6px 10px;
+        margin: 2px;
+        font-size: 12px;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+
+    #menuButton {
+        font-size: 20px;
+        padding: 6px 10px;
+    }
+
+    .menu-button {
+        top: 8px;
+        left: 8px;
+    }
+
+    #wheelCanvas {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    #result {
+        font-size: 14px;
+    }
+
+    #arrow {
+        font-size: 24px;
+    }
+
+    .history-list {
+        max-height: calc(100vh - 150px);
+    }
+
+    .history-item {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .history-time {
+        font-size: 10px;
+    }
+
+    .history-result {
+        font-size: 14px;
+    }
+}

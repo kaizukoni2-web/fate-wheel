@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Fate Wheel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="task.css">
+    </head>
+
+    <body>
+        <button id="menuButton" class="menu-button">☰</button>
+        
+        <div id="historyPanel" class="history-panel">
+            <div class="panel-header">
+                <h4>Spin History</h4>
+                <button id="closeButton" class="close-button">✕</button>
+            </div>
+            <div id="historyList" class="history-list">
+                <p>No spins yet</p>
+            </div>
+            <button id="clearHistory" class="clear-button">Clear History</button>
+        </div>
+
+        <h1>Fate Wheel</h1>
+        <input type="text" id="sectionsInput" placeholder="Enter sections separated by commas (e.g., number, color, action)">
+        <button id="updateButton">Update Wheel</button>
+        <br><br>
+        <canvas id="wheelCanvas" width="400" height="400"></canvas>
+        <br>
+        <button id="spinButton">Spin</button>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+            <div id="arrow">←</div>
+            <div id="result">Result will appear here</div>
+        </div>
+        <script src="task.js"></script>
+    </body>
+</html>
