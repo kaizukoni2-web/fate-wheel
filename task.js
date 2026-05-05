@@ -51,6 +51,21 @@ function updateHistoryDisplay() {
   `).join('');
 }
 
+function loadQuestion() {
+  const saved = localStorage.getItem('wheelQuestion');
+  return saved || 'What should I do?';
+}
+
+function saveQuestion(question) {
+  localStorage.setItem('wheelQuestion', question);
+}
+
+function updateQuestionDisplay() {
+  const question = loadQuestion();
+  document.getElementById('questionInput').value = question;
+  document.getElementById('questionDisplay').textContent = question;
+}
+
 function drawWheel() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.save();
@@ -143,9 +158,21 @@ document.getElementById('sectionsInput').value = sections.join(', ');
 // Load and display history
 updateHistoryDisplay();
 
+// Load and display question
+updateQuestionDisplay();
+
 // Add event listeners
 document.getElementById('spinButton').addEventListener('click', spinWheel);
 document.getElementById('updateButton').addEventListener('click', updateWheel);
+document.getElementById('saveQuestionButton').addEventListener('click', () => {
+  const question = document.getElementById('questionInput').value.trim();
+  if (question) {
+    saveQuestion(question);
+    updateQuestionDisplay();
+  } else {
+    alert('Please enter a question');
+  }
+});
 document.getElementById('menuButton').addEventListener('click', () => {
   document.getElementById('historyPanel').classList.toggle('open');
 });

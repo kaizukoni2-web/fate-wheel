@@ -22,13 +22,24 @@
         </div>
 
         <h1>Fate Wheel</h1>
+        
+        <div class="question-container">
+            <label for="questionInput" class="question-label">Question/Title:</label>
+            <input type="text" id="questionInput" placeholder="e.g., Who will win? or How many will join?" class="question-input">
+            <button id="saveQuestionButton">Save Question</button>
+        </div>
+        
+        <div id="questionDisplay" class="question-display">
+            Loading question...
+        </div>
+        
         <input type="text" id="sectionsInput" placeholder="Enter sections separated by commas (e.g., number, color, action)">
         <button id="updateButton">Update Wheel</button>
         <br><br>
         <canvas id="wheelCanvas" width="400" height="400"></canvas>
         <br>
         <button id="spinButton">Spin</button>
-        <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+        <div class="result-container">
             <div id="arrow">←</div>
             <div id="result">Result will appear here</div>
         </div>

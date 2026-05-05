@@ -55,6 +55,40 @@ button:hover {
     color: #050505;
 }
 
+.question-container {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.question-label {
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.question-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.question-display {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fdfdfd;
+    text-align: center;
+    min-height: 25px;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .menu-button {
     position: fixed;
     top: 20px;
