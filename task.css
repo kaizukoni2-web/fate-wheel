@@ -54,6 +54,17 @@ button:hover {
     font-size: 36px;
     color: #050505;
 }
+ #arrow {
+    position: absolute;   /* This lets it float freely */
+    right: 35%;          /* Adjust this % to move it closer to the wheel */
+    top: 99%;            /* Centers it vertically */
+    transform: translateY(-50%); /* Keeps it perfectly centered at the equator */
+    color: #070707;      /* black color from image_799f8c.png */
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 10;
+
+}
 
 .question-container {
     width: 100%;
