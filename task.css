@@ -110,7 +110,7 @@ button:hover {
 .history-panel {
     position: fixed;
     top: 0;
-    left: -350px;
+    left: -400px;
     width: 320px;
     height: 100vh;
     background-color: #1a1a1a;
