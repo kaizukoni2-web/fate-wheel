@@ -31,7 +31,8 @@ function saveHistory() {
 
 function addToHistory(result) {
   const timestamp = new Date().toLocaleString();
-  history.unshift({ result, timestamp });
+  const question = loadQuestion();
+  history.unshift({ question, result, timestamp });
   if (history.length > 50) history.pop();
   saveHistory();
   updateHistoryDisplay();
@@ -46,7 +47,8 @@ function updateHistoryDisplay() {
   historyList.innerHTML = history.map(item => `
     <div class="history-item">
       <div class="history-time">${item.timestamp}</div>
-      <div class="history-result">${item.result}</div>
+      <div class="history-question" style="font-size:13px; color:#888; margin-bottom:5px;">Q: ${item.question}</div>
+      <div class="history-result">Answer: ${item.result}</div>
     </div>
   `).join('');
 }
