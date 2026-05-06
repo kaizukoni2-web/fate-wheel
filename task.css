@@ -57,7 +57,7 @@ button:hover {
  #arrow {
     position: absolute;   /* This lets it float freely */
     right: 35%;          /* Adjust this % to move it closer to the wheel */
-    top: 99%;            /* Centers it vertically */
+    top: 97%;            /* Centers it vertically */
     transform: translateY(-50%); /* Keeps it perfectly centered at the equator */
     color: #070707;      /* black color from image_799f8c.png */
     font-size: 50px;
